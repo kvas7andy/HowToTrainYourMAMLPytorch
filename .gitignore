@@ -1,7 +1,6 @@
 #user defined
 *.pkl
-train_model_*
-
+*/saved_models/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
