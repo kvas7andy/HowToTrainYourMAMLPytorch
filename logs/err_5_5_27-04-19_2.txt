@@ -1,0 +1,28 @@
+  0%|          | 0/1150 [00:00<?, ?it/s]  0%|          | 1/1150 [00:00<03:18,  5.78it/s] 11%|█▏        | 131/1150 [00:00<02:03,  8.24it/s] 19%|█▉        | 221/1150 [00:00<01:19, 11.72it/s] 28%|██▊       | 322/1150 [00:00<00:49, 16.67it/s] 34%|███▍      | 390/1150 [00:00<00:32, 23.50it/s] 42%|████▏     | 482/1150 [00:00<00:20, 33.20it/s] 50%|█████     | 578/1150 [00:00<00:12, 46.73it/s] 59%|█████▉    | 683/1150 [00:00<00:07, 65.51it/s] 68%|██████▊   | 787/1150 [00:01<00:03, 91.10it/s] 77%|███████▋  | 886/1150 [00:01<00:02, 125.14it/s] 86%|████████▌ | 991/1150 [00:01<00:00, 169.84it/s] 96%|█████████▌| 1100/1150 [00:01<00:00, 227.14it/s]100%|██████████| 1150/1150 [00:01<00:00, 834.82it/s]
+  0%|          | 0/50 [00:00<?, ?it/s] 38%|███▊      | 19/50 [00:00<00:00, 189.98it/s]100%|██████████| 50/50 [00:00<00:00, 271.67it/s]
+  0%|          | 0/423 [00:00<?, ?it/s]  2%|▏         | 7/423 [00:00<00:05, 69.43it/s] 24%|██▍       | 103/423 [00:00<00:03, 96.16it/s] 38%|███▊      | 161/423 [00:00<00:02, 127.48it/s] 60%|██████    | 255/423 [00:00<00:00, 172.05it/s] 84%|████████▍ | 357/423 [00:00<00:00, 229.10it/s]100%|██████████| 423/423 [00:00<00:00, 703.42it/s]
+  0%|          | 0/50000 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "train_maml_system.py", line 15, in <module>
+    maml_system.run_experiment()
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/experiment_builder.py", line 329, in run_experiment
+    sample_idx=self.state['current_iter'])
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/experiment_builder.py", line 124, in train_iteration
+    losses, _ = self.model.run_train_iter(data_batch=data_batch, epoch=epoch_idx)
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/few_shot_learning_system.py", line 339, in run_train_iter
+    losses, per_task_target_preds = self.train_forward_prop(data_batch=data_batch, epoch=epoch)
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/few_shot_learning_system.py", line 285, in train_forward_prop
+    training_phase=True)
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/few_shot_learning_system.py", line 201, in forward
+    training=True, num_step=num_step)
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/few_shot_learning_system.py", line 259, in net_forward
+    backup_running_statistics=backup_running_statistics, num_step=num_step)
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/meta_neural_network_architectures.py", line 650, in forward
+    num_step=num_step)
+  File "/home/akvasov/anaconda3/envs/meta_learning_pytorch_env/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/meta_neural_network_architectures.py", line 426, in forward
+    out = F.leaky_relu(out)
+  File "/home/akvasov/anaconda3/envs/meta_learning_pytorch_env/lib/python3.6/site-packages/torch/nn/functional.py", line 1018, in leaky_relu
+    result = torch._C._nn.leaky_relu(input, negative_slope)
+RuntimeError: CUDA out of memory. Tried to allocate 4.88 MiB (GPU 0; 11.92 GiB total capacity; 2.11 GiB already allocated; 3.19 MiB free; 7.64 MiB cached)

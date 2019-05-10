@@ -1,0 +1,22 @@
+  0%|          | 0/1150 [00:00<?, ?it/s]  0%|          | 1/1150 [00:00<03:23,  5.64it/s] 12%|█▏        | 136/1150 [00:00<02:06,  8.05it/s] 19%|█▉        | 221/1150 [00:00<01:21, 11.45it/s] 28%|██▊       | 318/1150 [00:00<00:51, 16.27it/s] 37%|███▋      | 426/1150 [00:00<00:31, 23.09it/s] 47%|████▋     | 546/1150 [00:00<00:18, 32.72it/s] 58%|█████▊    | 669/1150 [00:00<00:10, 46.21it/s] 69%|██████▉   | 791/1150 [00:00<00:05, 64.96it/s] 79%|███████▉  | 909/1150 [00:00<00:02, 90.64it/s] 89%|████████▉ | 1028/1150 [00:01<00:00, 125.32it/s] 99%|█████████▉| 1140/1150 [00:01<00:00, 170.78it/s]100%|██████████| 1150/1150 [00:01<00:00, 944.20it/s]
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:00<00:05,  9.68it/s]100%|██████████| 50/50 [00:00<00:00, 281.30it/s]
+  0%|          | 0/423 [00:00<?, ?it/s]  0%|          | 1/423 [00:00<00:47,  8.95it/s] 22%|██▏       | 93/423 [00:00<00:25, 12.73it/s] 44%|████▎     | 185/423 [00:00<00:13, 18.08it/s] 67%|██████▋   | 285/423 [00:00<00:05, 25.63it/s] 91%|█████████ | 383/423 [00:00<00:01, 36.20it/s]100%|██████████| 423/423 [00:00<00:00, 727.59it/s]
+  0%|          | 0/50000 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "train_maml_system.py", line 15, in <module>
+    maml_system.run_experiment()
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/experiment_builder.py", line 329, in run_experiment
+    sample_idx=self.state['current_iter'])
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/experiment_builder.py", line 124, in train_iteration
+    losses, _ = self.model.run_train_iter(data_batch=data_batch, epoch=epoch_idx)
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/few_shot_learning_system.py", line 339, in run_train_iter
+    losses, per_task_target_preds = self.train_forward_prop(data_batch=data_batch, epoch=epoch)
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/few_shot_learning_system.py", line 285, in train_forward_prop
+    training_phase=True)
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/few_shot_learning_system.py", line 206, in forward
+    current_step_idx=num_step)
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/few_shot_learning_system.py", line 125, in apply_inner_loop_update
+    create_graph=use_second_order)
+  File "/home/akvasov/anaconda3/envs/meta_learning_pytorch_env/lib/python3.6/site-packages/torch/autograd/__init__.py", line 145, in grad
+    inputs, allow_unused)
+RuntimeError: CUDA out of memory. Tried to allocate 11.50 MiB (GPU 0; 11.92 GiB total capacity; 6.73 GiB already allocated; 8.69 MiB free; 3.23 MiB cached)

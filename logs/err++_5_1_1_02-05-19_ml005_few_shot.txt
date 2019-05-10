@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "train_maml_system.py", line 12, in <module>
+    maybe_unzip_dataset(args=args)
+  File "/home/akvasov/repos/HowToTrainYourMAMLPytorch/utils/dataset_tools.py", line 30, in maybe_unzip_dataset
+    for subdir, dir, files in os.walk(dataset_path):
+  File "/home/akvasov/anaconda3/envs/meta_learning_pytorch_env/lib/python3.6/os.py", line 409, in walk
+    yield from walk(new_path, topdown, onerror, followlinks)
+  File "/home/akvasov/anaconda3/envs/meta_learning_pytorch_env/lib/python3.6/os.py", line 409, in walk
+    yield from walk(new_path, topdown, onerror, followlinks)
+  File "/home/akvasov/anaconda3/envs/meta_learning_pytorch_env/lib/python3.6/os.py", line 409, in walk
+    yield from walk(new_path, topdown, onerror, followlinks)
+  File "/home/akvasov/anaconda3/envs/meta_learning_pytorch_env/lib/python3.6/os.py", line 358, in walk
+    entry = next(scandir_it)
+KeyboardInterrupt

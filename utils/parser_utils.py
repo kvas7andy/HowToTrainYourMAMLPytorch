@@ -18,6 +18,7 @@ def get_args():
     parser.add_argument('--samples_per_iter', nargs="?", type=int, default=1)
     parser.add_argument('--labels_as_int', type=str, default="False")
     parser.add_argument('--seed', type=int, default=104)
+    parser.add_argument('--env_only', help="don't train, only evaluate", action="store_true", default=False)
 
     parser.add_argument('--gpu_to_use', type=int)
     parser.add_argument('--num_dataprovider_workers', nargs="?", type=int, default=4)

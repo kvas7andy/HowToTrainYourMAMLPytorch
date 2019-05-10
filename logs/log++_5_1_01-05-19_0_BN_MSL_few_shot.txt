@@ -1,0 +1,170 @@
+batch_size 16 <class 'int'>
+image_height 28 <class 'int'>
+image_width 28 <class 'int'>
+image_channels 1 <class 'int'>
+reset_stored_filepaths False <class 'bool'>
+reverse_channels False <class 'bool'>
+num_of_gpus 1 <class 'int'>
+indexes_of_folders_indicating_class [-3, -2] <class 'list'>
+train_val_test_split [0.70918052988, 0.03080714725, 0.2606284658] <class 'list'>
+samples_per_iter 1 <class 'int'>
+labels_as_int False <class 'bool'>
+seed 104 <class 'int'>
+gpu_to_use 0 <class 'int'>
+num_dataprovider_workers 4 <class 'int'>
+max_models_to_save 5 <class 'int'>
+dataset_name omniglot_dataset <class 'str'>
+dataset_path datasets/datasets/omniglot_dataset
+dataset_path datasets/omniglot_dataset <class 'str'>
+reset_stored_paths False <class 'bool'>
+experiment_name omniglot_maml++_omniglot_5_way_1_shot_maml_0_BN_MSL <class 'str'>
+architecture_name None <class 'NoneType'>
+continue_from_epoch latest <class 'str'>
+dropout_rate_value 0.0 <class 'float'>
+num_target_samples 1 <class 'int'>
+second_order True <class 'bool'>
+total_epochs 100 <class 'int'>
+total_iter_per_epoch 500 <class 'int'>
+min_learning_rate 1e-05 <class 'float'>
+meta_learning_rate 0.001 <class 'float'>
+meta_opt_bn False <class 'bool'>
+task_learning_rate -1 <class 'int'>
+norm_layer batch_norm <class 'str'>
+max_pooling True <class 'bool'>
+per_step_bn_statistics True <class 'bool'>
+num_classes_per_set 5 <class 'int'>
+cnn_num_blocks 4 <class 'int'>
+number_of_training_steps_per_iter 5 <class 'int'>
+number_of_evaluation_steps_per_iter 5 <class 'int'>
+cnn_num_filters 64 <class 'int'>
+cnn_blocks_per_stage 1 <class 'int'>
+num_samples_per_class 1 <class 'int'>
+name_of_args_json_file experiment_config/omniglot_maml++_omniglot_5_way_1_shot_maml_0_BN_MSL.json <class 'str'>
+train_seed 0 <class 'int'>
+val_seed 0 <class 'int'>
+load_from_npz_files False <class 'bool'>
+sets_are_pre_split False <class 'bool'>
+load_into_memory True <class 'bool'>
+init_inner_loop_learning_rate 0.1 <class 'float'>
+train_in_stages False <class 'bool'>
+multi_step_loss_num_epochs 10 <class 'int'>
+minimum_per_task_contribution 0.01 <class 'float'>
+num_evaluation_tasks 600 <class 'int'>
+learnable_per_layer_per_step_inner_loop_learning_rate False <class 'bool'>
+enable_inner_loop_optimizable_bn_params False <class 'bool'>
+evaluate_on_test_set_only False <class 'bool'>
+learnable_batch_norm_momentum False <class 'bool'>
+evalute_on_test_set_only False <class 'bool'>
+learnable_bn_gamma True <class 'bool'>
+learnable_bn_beta True <class 'bool'>
+weight_decay 0.0 <class 'float'>
+total_epochs_before_pause 10 <class 'int'>
+first_order_to_second_order_epoch -1 <class 'int'>
+num_stages 4 <class 'int'>
+conv_padding 1 <class 'int'>
+use_multi_step_loss_optimization True <class 'bool'>
+Using max pooling
+torch.Size([2, 64, 28, 28])
+torch.Size([2, 64, 14, 14])
+torch.Size([2, 64, 7, 7])
+torch.Size([2, 64, 3, 3])
+VGGNetwork build torch.Size([2, 5])
+meta network params
+layer_dict.conv0.conv.weight torch.Size([64, 1, 3, 3])
+layer_dict.conv0.conv.bias torch.Size([64])
+layer_dict.conv0.norm_layer.running_mean torch.Size([5, 64])
+layer_dict.conv0.norm_layer.running_var torch.Size([5, 64])
+layer_dict.conv0.norm_layer.bias torch.Size([5, 64])
+layer_dict.conv0.norm_layer.weight torch.Size([5, 64])
+layer_dict.conv1.conv.weight torch.Size([64, 64, 3, 3])
+layer_dict.conv1.conv.bias torch.Size([64])
+layer_dict.conv1.norm_layer.running_mean torch.Size([5, 64])
+layer_dict.conv1.norm_layer.running_var torch.Size([5, 64])
+layer_dict.conv1.norm_layer.bias torch.Size([5, 64])
+layer_dict.conv1.norm_layer.weight torch.Size([5, 64])
+layer_dict.conv2.conv.weight torch.Size([64, 64, 3, 3])
+layer_dict.conv2.conv.bias torch.Size([64])
+layer_dict.conv2.norm_layer.running_mean torch.Size([5, 64])
+layer_dict.conv2.norm_layer.running_var torch.Size([5, 64])
+layer_dict.conv2.norm_layer.bias torch.Size([5, 64])
+layer_dict.conv2.norm_layer.weight torch.Size([5, 64])
+layer_dict.conv3.conv.weight torch.Size([64, 64, 3, 3])
+layer_dict.conv3.conv.bias torch.Size([64])
+layer_dict.conv3.norm_layer.running_mean torch.Size([5, 64])
+layer_dict.conv3.norm_layer.running_var torch.Size([5, 64])
+layer_dict.conv3.norm_layer.bias torch.Size([5, 64])
+layer_dict.conv3.norm_layer.weight torch.Size([5, 64])
+layer_dict.linear.weights torch.Size([5, 64])
+layer_dict.linear.bias torch.Size([5])
+Inner Loop parameters
+classifier.layer_dict.conv0.conv.weight torch.Size([64, 1, 3, 3])
+classifier.layer_dict.conv0.conv.bias torch.Size([64])
+classifier.layer_dict.conv1.conv.weight torch.Size([64, 64, 3, 3])
+classifier.layer_dict.conv1.conv.bias torch.Size([64])
+classifier.layer_dict.conv2.conv.weight torch.Size([64, 64, 3, 3])
+classifier.layer_dict.conv2.conv.bias torch.Size([64])
+classifier.layer_dict.conv3.conv.weight torch.Size([64, 64, 3, 3])
+classifier.layer_dict.conv3.conv.bias torch.Size([64])
+classifier.layer_dict.linear.weights torch.Size([5, 64])
+classifier.layer_dict.linear.bias torch.Size([5])
+Outer Loop parameters
+classifier.layer_dict.conv0.conv.weight torch.Size([64, 1, 3, 3])
+classifier.layer_dict.conv0.conv.bias torch.Size([64])
+classifier.layer_dict.conv0.norm_layer.bias torch.Size([5, 64])
+classifier.layer_dict.conv0.norm_layer.weight torch.Size([5, 64])
+classifier.layer_dict.conv1.conv.weight torch.Size([64, 64, 3, 3])
+classifier.layer_dict.conv1.conv.bias torch.Size([64])
+classifier.layer_dict.conv1.norm_layer.bias torch.Size([5, 64])
+classifier.layer_dict.conv1.norm_layer.weight torch.Size([5, 64])
+classifier.layer_dict.conv2.conv.weight torch.Size([64, 64, 3, 3])
+classifier.layer_dict.conv2.conv.bias torch.Size([64])
+classifier.layer_dict.conv2.norm_layer.bias torch.Size([5, 64])
+classifier.layer_dict.conv2.norm_layer.weight torch.Size([5, 64])
+classifier.layer_dict.conv3.conv.weight torch.Size([64, 64, 3, 3])
+classifier.layer_dict.conv3.conv.bias torch.Size([64])
+classifier.layer_dict.conv3.norm_layer.bias torch.Size([5, 64])
+classifier.layer_dict.conv3.norm_layer.weight torch.Size([5, 64])
+classifier.layer_dict.linear.weights torch.Size([5, 64])
+classifier.layer_dict.linear.bias torch.Size([5])
+datasets/omniglot_dataset
+count stuff________________________________________ 32460
+file count is correct
+attempting to find existing checkpoint
+1150 1200 1623
+Loading data into RAM
+Currently loading into memory the train set
+Currently loading into memory the val set
+Currently loading into memory the test set
+data {'train': 23000, 'val': 1000, 'test': 8460}
+train_seed 985773, val_seed: 985773, at start time
+0 50000
+shape of data torch.Size([16, 5, 1, 1, 28, 28]) torch.Size([16, 5, 1, 1, 28, 28]) torch.Size([16, 5, 1]) torch.Size([16, 5, 1])
+Best validation accuracy 0.9003378378378378
+saved models to /home/akvasov/repos/HowToTrainYourMAMLPytorch/omniglot_maml++_omniglot_5_way_1_shot_maml_0_BN_MSL/saved_models
+epoch 1 -> train_loss_mean: 7.4776, train_loss_std: 4.0608, train_accuracy_mean: 0.8607, train_accuracy_std: 0.0776, train_loss_importance_vector_0_mean: 0.2000, train_loss_importance_vector_0_std: 0.0000, train_loss_importance_vector_1_mean: 0.2000, train_loss_importance_vector_1_std: 0.0000, train_loss_importance_vector_2_mean: 0.2000, train_loss_importance_vector_2_std: 0.0000, train_loss_importance_vector_3_mean: 0.2000, train_loss_importance_vector_3_std: 0.0000, train_loss_importance_vector_4_mean: 0.2000, train_loss_importance_vector_4_std: 0.0000, val_loss_mean: 4.8659, val_loss_std: 1.0714, val_accuracy_mean: 0.9003, val_accuracy_std: 0.0297, val_loss_importance_vector_0_mean: 0.2000, val_loss_importance_vector_0_std: 0.0000, val_loss_importance_vector_1_mean: 0.2000, val_loss_importance_vector_1_std: 0.0000, val_loss_importance_vector_2_mean: 0.2000, val_loss_importance_vector_2_std: 0.0000, val_loss_importance_vector_3_mean: 0.2000, val_loss_importance_vector_3_std: 0.0000, val_loss_importance_vector_4_mean: 0.2000, val_loss_importance_vector_4_std: 0.0000, 
+Best validation accuracy 0.9233108108108109
+saved models to /home/akvasov/repos/HowToTrainYourMAMLPytorch/omniglot_maml++_omniglot_5_way_1_shot_maml_0_BN_MSL/saved_models
+epoch 2 -> train_loss_mean: 3.3125, train_loss_std: 0.9096, train_accuracy_mean: 0.9352, train_accuracy_std: 0.0283, train_loss_importance_vector_0_mean: 0.1800, train_loss_importance_vector_0_std: 0.0000, train_loss_importance_vector_1_mean: 0.1800, train_loss_importance_vector_1_std: 0.0000, train_loss_importance_vector_2_mean: 0.1800, train_loss_importance_vector_2_std: 0.0000, train_loss_importance_vector_3_mean: 0.1800, train_loss_importance_vector_3_std: 0.0000, train_loss_importance_vector_4_mean: 0.2800, train_loss_importance_vector_4_std: 0.0000, val_loss_mean: 3.5244, val_loss_std: 1.0427, val_accuracy_mean: 0.9233, val_accuracy_std: 0.0249, val_loss_importance_vector_0_mean: 0.1800, val_loss_importance_vector_0_std: 0.0000, val_loss_importance_vector_1_mean: 0.1800, val_loss_importance_vector_1_std: 0.0000, val_loss_importance_vector_2_mean: 0.1800, val_loss_importance_vector_2_std: 0.0000, val_loss_importance_vector_3_mean: 0.1800, val_loss_importance_vector_3_std: 0.0000, val_loss_importance_vector_4_mean: 0.2800, val_loss_importance_vector_4_std: 0.0000, 
+Best validation accuracy 0.9388513513513514
+saved models to /home/akvasov/repos/HowToTrainYourMAMLPytorch/omniglot_maml++_omniglot_5_way_1_shot_maml_0_BN_MSL/saved_models
+epoch 3 -> train_loss_mean: 2.4865, train_loss_std: 0.9359, train_accuracy_mean: 0.9509, train_accuracy_std: 0.0263, train_loss_importance_vector_0_mean: 0.1600, train_loss_importance_vector_0_std: 0.0000, train_loss_importance_vector_1_mean: 0.1600, train_loss_importance_vector_1_std: 0.0000, train_loss_importance_vector_2_mean: 0.1600, train_loss_importance_vector_2_std: 0.0000, train_loss_importance_vector_3_mean: 0.1600, train_loss_importance_vector_3_std: 0.0000, train_loss_importance_vector_4_mean: 0.3600, train_loss_importance_vector_4_std: 0.0000, val_loss_mean: 2.9422, val_loss_std: 0.8630, val_accuracy_mean: 0.9389, val_accuracy_std: 0.0223, val_loss_importance_vector_0_mean: 0.1600, val_loss_importance_vector_0_std: 0.0000, val_loss_importance_vector_1_mean: 0.1600, val_loss_importance_vector_1_std: 0.0000, val_loss_importance_vector_2_mean: 0.1600, val_loss_importance_vector_2_std: 0.0000, val_loss_importance_vector_3_mean: 0.1600, val_loss_importance_vector_3_std: 0.0000, val_loss_importance_vector_4_mean: 0.3600, val_loss_importance_vector_4_std: 0.0000, 
+Best validation accuracy 0.9462837837837841
+saved models to /home/akvasov/repos/HowToTrainYourMAMLPytorch/omniglot_maml++_omniglot_5_way_1_shot_maml_0_BN_MSL/saved_models
+epoch 4 -> train_loss_mean: 2.0322, train_loss_std: 0.7965, train_accuracy_mean: 0.9590, train_accuracy_std: 0.0220, train_loss_importance_vector_0_mean: 0.1400, train_loss_importance_vector_0_std: 0.0000, train_loss_importance_vector_1_mean: 0.1400, train_loss_importance_vector_1_std: 0.0000, train_loss_importance_vector_2_mean: 0.1400, train_loss_importance_vector_2_std: 0.0000, train_loss_importance_vector_3_mean: 0.1400, train_loss_importance_vector_3_std: 0.0000, train_loss_importance_vector_4_mean: 0.4400, train_loss_importance_vector_4_std: 0.0000, val_loss_mean: 2.4369, val_loss_std: 0.8586, val_accuracy_mean: 0.9463, val_accuracy_std: 0.0238, val_loss_importance_vector_0_mean: 0.1400, val_loss_importance_vector_0_std: 0.0000, val_loss_importance_vector_1_mean: 0.1400, val_loss_importance_vector_1_std: 0.0000, val_loss_importance_vector_2_mean: 0.1400, val_loss_importance_vector_2_std: 0.0000, val_loss_importance_vector_3_mean: 0.1400, val_loss_importance_vector_3_std: 0.0000, val_loss_importance_vector_4_mean: 0.4400, val_loss_importance_vector_4_std: 0.0000, 
+Best validation accuracy 0.9503378378378377
+saved models to /home/akvasov/repos/HowToTrainYourMAMLPytorch/omniglot_maml++_omniglot_5_way_1_shot_maml_0_BN_MSL/saved_models
+epoch 5 -> train_loss_mean: 1.6362, train_loss_std: 0.7324, train_accuracy_mean: 0.9683, train_accuracy_std: 0.0210, train_loss_importance_vector_0_mean: 0.1200, train_loss_importance_vector_0_std: 0.0000, train_loss_importance_vector_1_mean: 0.1200, train_loss_importance_vector_1_std: 0.0000, train_loss_importance_vector_2_mean: 0.1200, train_loss_importance_vector_2_std: 0.0000, train_loss_importance_vector_3_mean: 0.1200, train_loss_importance_vector_3_std: 0.0000, train_loss_importance_vector_4_mean: 0.5200, train_loss_importance_vector_4_std: 0.0000, val_loss_mean: 2.3712, val_loss_std: 1.0583, val_accuracy_mean: 0.9503, val_accuracy_std: 0.0226, val_loss_importance_vector_0_mean: 0.1200, val_loss_importance_vector_0_std: 0.0000, val_loss_importance_vector_1_mean: 0.1200, val_loss_importance_vector_1_std: 0.0000, val_loss_importance_vector_2_mean: 0.1200, val_loss_importance_vector_2_std: 0.0000, val_loss_importance_vector_3_mean: 0.1200, val_loss_importance_vector_3_std: 0.0000, val_loss_importance_vector_4_mean: 0.5200, val_loss_importance_vector_4_std: 0.0000, 
+Best validation accuracy 0.9601351351351349
+saved models to /home/akvasov/repos/HowToTrainYourMAMLPytorch/omniglot_maml++_omniglot_5_way_1_shot_maml_0_BN_MSL/saved_models
+epoch 6 -> train_loss_mean: 1.4553, train_loss_std: 0.7549, train_accuracy_mean: 0.9710, train_accuracy_std: 0.0199, train_loss_importance_vector_0_mean: 0.1000, train_loss_importance_vector_0_std: 0.0000, train_loss_importance_vector_1_mean: 0.1000, train_loss_importance_vector_1_std: 0.0000, train_loss_importance_vector_2_mean: 0.1000, train_loss_importance_vector_2_std: 0.0000, train_loss_importance_vector_3_mean: 0.1000, train_loss_importance_vector_3_std: 0.0000, train_loss_importance_vector_4_mean: 0.6000, train_loss_importance_vector_4_std: 0.0000, val_loss_mean: 1.8241, val_loss_std: 0.7754, val_accuracy_mean: 0.9601, val_accuracy_std: 0.0179, val_loss_importance_vector_0_mean: 0.1000, val_loss_importance_vector_0_std: 0.0000, val_loss_importance_vector_1_mean: 0.1000, val_loss_importance_vector_1_std: 0.0000, val_loss_importance_vector_2_mean: 0.1000, val_loss_importance_vector_2_std: 0.0000, val_loss_importance_vector_3_mean: 0.1000, val_loss_importance_vector_3_std: 0.0000, val_loss_importance_vector_4_mean: 0.6000, val_loss_importance_vector_4_std: 0.0000, 
+Best validation accuracy 0.9722972972972973
+saved models to /home/akvasov/repos/HowToTrainYourMAMLPytorch/omniglot_maml++_omniglot_5_way_1_shot_maml_0_BN_MSL/saved_models
+epoch 7 -> train_loss_mean: 1.2566, train_loss_std: 0.7031, train_accuracy_mean: 0.9748, train_accuracy_std: 0.0186, train_loss_importance_vector_0_mean: 0.0800, train_loss_importance_vector_0_std: 0.0000, train_loss_importance_vector_1_mean: 0.0800, train_loss_importance_vector_1_std: 0.0000, train_loss_importance_vector_2_mean: 0.0800, train_loss_importance_vector_2_std: 0.0000, train_loss_importance_vector_3_mean: 0.0800, train_loss_importance_vector_3_std: 0.0000, train_loss_importance_vector_4_mean: 0.6800, train_loss_importance_vector_4_std: 0.0000, val_loss_mean: 1.5164, val_loss_std: 0.7764, val_accuracy_mean: 0.9723, val_accuracy_std: 0.0172, val_loss_importance_vector_0_mean: 0.0800, val_loss_importance_vector_0_std: 0.0000, val_loss_importance_vector_1_mean: 0.0800, val_loss_importance_vector_1_std: 0.0000, val_loss_importance_vector_2_mean: 0.0800, val_loss_importance_vector_2_std: 0.0000, val_loss_importance_vector_3_mean: 0.0800, val_loss_importance_vector_3_std: 0.0000, val_loss_importance_vector_4_mean: 0.6800, val_loss_importance_vector_4_std: 0.0000, 
+saved models to /home/akvasov/repos/HowToTrainYourMAMLPytorch/omniglot_maml++_omniglot_5_way_1_shot_maml_0_BN_MSL/saved_models
+epoch 8 -> train_loss_mean: 1.3346, train_loss_std: 0.9044, train_accuracy_mean: 0.9739, train_accuracy_std: 0.0213, train_loss_importance_vector_0_mean: 0.0600, train_loss_importance_vector_0_std: 0.0000, train_loss_importance_vector_1_mean: 0.0600, train_loss_importance_vector_1_std: 0.0000, train_loss_importance_vector_2_mean: 0.0600, train_loss_importance_vector_2_std: 0.0000, train_loss_importance_vector_3_mean: 0.0600, train_loss_importance_vector_3_std: 0.0000, train_loss_importance_vector_4_mean: 0.7600, train_loss_importance_vector_4_std: 0.0000, val_loss_mean: 1.7419, val_loss_std: 0.7060, val_accuracy_mean: 0.9622, val_accuracy_std: 0.0196, val_loss_importance_vector_0_mean: 0.0600, val_loss_importance_vector_0_std: 0.0000, val_loss_importance_vector_1_mean: 0.0600, val_loss_importance_vector_1_std: 0.0000, val_loss_importance_vector_2_mean: 0.0600, val_loss_importance_vector_2_std: 0.0000, val_loss_importance_vector_3_mean: 0.0600, val_loss_importance_vector_3_std: 0.0000, val_loss_importance_vector_4_mean: 0.7600, val_loss_importance_vector_4_std: 0.0000, 
+Best validation accuracy 0.977364864864865
+saved models to /home/akvasov/repos/HowToTrainYourMAMLPytorch/omniglot_maml++_omniglot_5_way_1_shot_maml_0_BN_MSL/saved_models
+epoch 9 -> train_loss_mean: 1.1177, train_loss_std: 0.6867, train_accuracy_mean: 0.9774, train_accuracy_std: 0.0173, train_loss_importance_vector_0_mean: 0.0400, train_loss_importance_vector_0_std: 0.0000, train_loss_importance_vector_1_mean: 0.0400, train_loss_importance_vector_1_std: 0.0000, train_loss_importance_vector_2_mean: 0.0400, train_loss_importance_vector_2_std: 0.0000, train_loss_importance_vector_3_mean: 0.0400, train_loss_importance_vector_3_std: 0.0000, train_loss_importance_vector_4_mean: 0.8400, train_loss_importance_vector_4_std: 0.0000, val_loss_mean: 1.3024, val_loss_std: 0.7524, val_accuracy_mean: 0.9774, val_accuracy_std: 0.0169, val_loss_importance_vector_0_mean: 0.0400, val_loss_importance_vector_0_std: 0.0000, val_loss_importance_vector_1_mean: 0.0400, val_loss_importance_vector_1_std: 0.0000, val_loss_importance_vector_2_mean: 0.0400, val_loss_importance_vector_2_std: 0.0000, val_loss_importance_vector_3_mean: 0.0400, val_loss_importance_vector_3_std: 0.0000, val_loss_importance_vector_4_mean: 0.8400, val_loss_importance_vector_4_std: 0.0000, 
+saved models to /home/akvasov/repos/HowToTrainYourMAMLPytorch/omniglot_maml++_omniglot_5_way_1_shot_maml_0_BN_MSL/saved_models
+epoch 10 -> train_loss_mean: 0.8953, train_loss_std: 0.5676, train_accuracy_mean: 0.9817, train_accuracy_std: 0.0154, train_loss_importance_vector_0_mean: 0.0200, train_loss_importance_vector_0_std: 0.0000, train_loss_importance_vector_1_mean: 0.0200, train_loss_importance_vector_1_std: 0.0000, train_loss_importance_vector_2_mean: 0.0200, train_loss_importance_vector_2_std: 0.0000, train_loss_importance_vector_3_mean: 0.0200, train_loss_importance_vector_3_std: 0.0000, train_loss_importance_vector_4_mean: 0.9200, train_loss_importance_vector_4_std: 0.0000, val_loss_mean: 1.2221, val_loss_std: 0.5850, val_accuracy_mean: 0.9726, val_accuracy_std: 0.0174, val_loss_importance_vector_0_mean: 0.0200, val_loss_importance_vector_0_std: 0.0000, val_loss_importance_vector_1_mean: 0.0200, val_loss_importance_vector_1_std: 0.0000, val_loss_importance_vector_2_mean: 0.0200, val_loss_importance_vector_2_std: 0.0000, val_loss_importance_vector_3_mean: 0.0200, val_loss_importance_vector_3_std: 0.0000, val_loss_importance_vector_4_mean: 0.9200, val_loss_importance_vector_4_std: 0.0000, 
+train_seed 985773, val_seed: 985773, at pause time
